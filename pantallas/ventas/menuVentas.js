@@ -7,17 +7,14 @@ async function menuVentas(datos) {
     let salir = false;
     while (!salir) {
         limpiarPantalla();
-        console.log('');
-        titulo('VENTAS', 83);
+        await listarVentas(datos);
         console.log('─'.repeat(85));
-        console.log('  1. Ver ventas');
-        console.log('  2. Registrar venta');
+        console.log('  1. Registrar venta');
         console.log('  0. Volver');
         console.log('─'.repeat(85));
-        const op = await pedirEntero('Opcion', [0, 1, 2]);
+        const op = await pedirEntero('Opcion', [0, 1]);
         switch (op) {
-            case 1: await listarVentas(datos);   await esperarEnter(); break;
-            case 2: await registrarVenta(datos); await esperarEnter(); break;
+            case 1: await registrarVenta(datos); await esperarEnter(); break;
             case 0: salir = true; break;
         }
     }
