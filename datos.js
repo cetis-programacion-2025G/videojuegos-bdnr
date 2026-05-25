@@ -11,9 +11,9 @@ function datosIniciales() {
             { id: 6, titulo: 'Elden Ring',           genero: 'RPG',      precio: 1199, stock: 4  },
         ],
         ventas: [
-            { id: 1, id_videojuego: 1, cliente: 'Diego Hernandez',  fecha: '2026-05-20' },
-            { id: 2, id_videojuego: 3, cliente: 'Valentina Cruz',   fecha: '2026-05-21' },
-            { id: 3, id_videojuego: 2, cliente: 'Diego Hernandez',  fecha: '2026-05-22' },
+            { id: 1, cliente: 'Diego Hernandez', fecha: '2026-05-20', items: [{ id_videojuego: 1, cantidad: 1 }] },
+            { id: 2, cliente: 'Valentina Cruz',  fecha: '2026-05-21', items: [{ id_videojuego: 3, cantidad: 2 }] },
+            { id: 3, cliente: 'Diego Hernandez', fecha: '2026-05-22', items: [{ id_videojuego: 2, cantidad: 1 }, { id_videojuego: 5, cantidad: 3 }] },
         ],
     };
 }

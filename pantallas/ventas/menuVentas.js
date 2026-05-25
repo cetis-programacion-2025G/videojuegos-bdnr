@@ -8,10 +8,10 @@ async function menuVentas(datos) {
     while (!salir) {
         limpiarPantalla();
         await listarVentas(datos);
-        console.log('─'.repeat(85));
+        console.log('─'.repeat(93));
         console.log('  1. Registrar venta');
         console.log('  0. Volver');
-        console.log('─'.repeat(85));
+        console.log('─'.repeat(93));
         const op = await pedirEntero('Opcion', [0, 1]);
         switch (op) {
             case 1: await registrarVenta(datos); await esperarEnter(); break;

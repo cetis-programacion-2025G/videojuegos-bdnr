@@ -6,16 +6,22 @@ async function insertarVenta(datos, nuevaVenta) {
         id = 1;
     }
     const venta = {
-        id:            id,
-        id_videojuego: nuevaVenta.id_videojuego,
-        cliente:       nuevaVenta.cliente,
-        fecha:         nuevaVenta.fecha,
+        id:      id,
+        cliente: nuevaVenta.cliente,
+        fecha:   nuevaVenta.fecha,
+        items:   nuevaVenta.items,
     };
     datos.ventas.push(venta);
-    for (let i = 0; i < datos.videojuegos.length; i++) {
-        if (datos.videojuegos[i].id === nuevaVenta.id_videojuego) {
-            if (datos.videojuegos[i].stock > 0) datos.videojuegos[i].stock -= 1;
-            break;
+    for (let j = 0; j < nuevaVenta.items.length; j++) {
+        const item = nuevaVenta.items[j];
+        for (let i = 0; i < datos.videojuegos.length; i++) {
+            if (datos.videojuegos[i].id === item.id_videojuego) {
+                datos.videojuegos[i].stock -= item.cantidad;
+                if (datos.videojuegos[i].stock < 0) {
+                    datos.videojuegos[i].stock = 0;
+                }
+                break;
+            }
         }
     }
     return venta;

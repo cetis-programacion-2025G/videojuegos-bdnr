@@ -7,11 +7,12 @@ async function listarVentas(datos) {
         { titulo: 'ID',      clave: 'id',      ancho: 4  },
         { titulo: 'Cliente', clave: 'cliente', ancho: 22 },
         { titulo: 'Titulo',  clave: 'titulo',  ancho: 26 },
+        { titulo: 'Cant.',   clave: 'cant',    ancho: 5  },
         { titulo: 'Precio',  clave: 'precio',  ancho: 7  },
         { titulo: 'Fecha',   clave: 'fecha',   ancho: 10 },
     ];
     console.log('');
-    titulo('LISTA DE VENTAS', 83);
+    titulo('LISTA DE VENTAS', 91);
     dibujarTabla(filas, columnas);
 }
 

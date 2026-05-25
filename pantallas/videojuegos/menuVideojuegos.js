@@ -20,7 +20,7 @@ async function menuVideojuegos(datos) {
         switch (op) {
             case 1: await agregarVideojuego(datos);  await esperarEnter(); break;
             case 2: await editarVideojuego(datos);   await esperarEnter(); break;
-            case 3: await eliminarVideojuego(datos); await esperarEnter(); break;
+            case 3: await eliminarVideojuego(datos); break;
             case 0: salir = true; break;
         }
     }
