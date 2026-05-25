@@ -1,0 +1,9 @@
+{
+  "name": "videojuegos-arreglos",
+  "version": "1.0.0",
+  "description": "Tienda de videojuegos con arreglos (sin base de datos)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
